@@ -160,7 +160,7 @@ address {
   text-transform: uppercase;
   width: 696px;
   padding-top: 200px;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 
   margin-left: auto;
   margin-right: auto;
@@ -184,6 +184,7 @@ address {
 
 .services-tittle {
   margin-bottom: 10px;
+  margin-top: 30px;
 
   color: var(--title-text-color);
   font-weight: 700;
@@ -198,21 +199,30 @@ address {
   font-size: 14px;
   line-height: 1.71;
 }
-.services-svg {
-  width: 270px;
-  height: 120px;
-  background-color: #f5f4fa;
-  border-radius: 4px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-.services-svg-icon {
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
 
 .services-icon {
   width: 270px;
+}
+
+.services-icon::before {
+  display: block;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 120px;
+  background-color: #f5f4fa;
+}
+.icon-locator::before {
+  background-image: url(../images/img-svg/antenna1.svg);
+}
+.icon-clock::before {
+  background-image: url(../images/img-svg/clock1.svg);
+}
+.icon-planning::before {
+  background-image: url(../images/img-svg/diagram1.svg);
+}
+.icon-astronaut::before {
+  background-image: url(../images/img-svg/astronaut1.svg);
 }
 
 .services-icon:not(:last-child) {
@@ -307,12 +317,6 @@ address {
 }
 .social-svg {
   padding-bottom: 24px;
-}
-
-.logo-social:hover,
-.logo-social:focus {
-  background-color: var(--accent-color);
-  color: var(--secondary-white-color);
 }
 
 /* Оформление секции наши клиенты */
@@ -418,16 +422,39 @@ address {
   color: var(--accent-color);
 }
 
+.subscription {
+  width: 300px;
+  margin-left: 45px;
+}
+
 /*  Оформление социальных сетей */
 
 .logo-social {
-  color: var(--title-text-color);
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .logo-social:hover,
 .logo-social:focus {
-  color: var(--accent-color);
+  background-color: var(--accent-color);
 }
 
+.logo-instagram {
+  background-image: url(../images/social-icon-footer/instagram.svg);
+}
+.logo-twitter {
+  background-image: url(../images/social-icon-footer/twitter.svg);
+}
+.logo-facebook {
+  background-image: url(../images/social-icon-footer/facebook.svg);
+}
+.logo-linkedin {
+  background-image: url(../images/social-icon-footer/linkedin.svg);
+}
 /* оформление кнопки главной страницы */
 
 .hero-text {
