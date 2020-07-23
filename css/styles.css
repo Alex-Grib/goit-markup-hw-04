@@ -141,12 +141,32 @@ address {
 .address-list:focus {
   color: var(--accent-color);
 }
+.address-list-svg {
+  margin-right: 10px;
+}
+.address-list:hover .address-list-svg {
+  fill: var(--accent-color);
+}
+/* .address-list-svg:hover {
+  fill: var(--accent-color);
+} */
 
 /* настраиваем оформление кнопки */
 
 /* секция герой HERO */
 .hero {
-  background-color: var(--fotter-bcg-color);
+  height: 600px;
+  max-width: 1600px;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url(../images/hero-bg/heropicture.jpg);
+  background-color: #2f303a;
+  margin-right: auto;
+  margin-left: auto;
+  background-position: center;
 }
 .hero-container {
   text-align: center;
@@ -200,33 +220,18 @@ address {
   line-height: 1.71;
 }
 
-.services-icon {
-  width: 270px;
-}
-
-.services-icon::before {
-  display: block;
-  content: "";
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 120px;
-  background-color: #f5f4fa;
-}
-.icon-locator::before {
-  background-image: url(../images/img-svg/antenna1.svg);
-}
-.icon-clock::before {
-  background-image: url(../images/img-svg/clock1.svg);
-}
-.icon-planning::before {
-  background-image: url(../images/img-svg/diagram1.svg);
-}
-.icon-astronaut::before {
-  background-image: url(../images/img-svg/astronaut1.svg);
-}
-
 .services-icon:not(:last-child) {
   margin-right: 30px;
+}
+
+.services-svg {
+  width: 270px;
+  height: 120px;
+  text-align: center;
+  padding-top: 24px;
+
+  background-color: #f5f4fa;
+  border-radius: 4px;
 }
 /* Оформление секции ЧЕМ МЫ ЗАНИМАЕМСЯ */
 
@@ -318,7 +323,28 @@ address {
 .social-svg {
   padding-bottom: 24px;
 }
+.team-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  background-color: white;
+  color: #afb1b8;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.team-link:hover {
+  background-color: var(--accent-color);
+}
 
+.team-link-icon {
+  fill: currentColor;
+}
+.team-link:hover .team-link-icon {
+  fill: white;
+}
 /* Оформление секции наши клиенты */
 
 .clients-list {
@@ -334,17 +360,25 @@ address {
 }
 
 .clients-border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 170px;
   height: 90px;
+  color: #afb1b8;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+}
 
-  outline: 1px solid #afb1b8;
+.cleints-border:hover .clients-border-svg {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
 }
-.clients-svg {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 63px;
-  padding-right: 63px;
+
+.clients-border-svg {
+  fill: currentColor;
 }
+
 /* оформление футера */
 .footer {
   padding-top: 60px;
@@ -430,11 +464,14 @@ address {
 /*  Оформление социальных сетей */
 
 .logo-social {
-  display: block;
-  width: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 44px;
+  width: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -442,18 +479,8 @@ address {
 .logo-social:focus {
   background-color: var(--accent-color);
 }
-
-.logo-instagram {
-  background-image: url(../images/social-icon-footer/instagram.svg);
-}
-.logo-twitter {
-  background-image: url(../images/social-icon-footer/twitter.svg);
-}
-.logo-facebook {
-  background-image: url(../images/social-icon-footer/facebook.svg);
-}
-.logo-linkedin {
-  background-image: url(../images/social-icon-footer/linkedin.svg);
+.logo-social-icon {
+  fill: var(--primary-white-color);
 }
 /* оформление кнопки главной страницы */
 
