@@ -130,6 +130,10 @@ address {
 }
 
 .address-list {
+  display: inline-flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
   text-decoration: none;
   color: var(--primary-text-color);
 }
@@ -143,13 +147,14 @@ address {
 }
 .address-list-svg {
   margin-right: 10px;
+  fill: var(--primary-text-color);
 }
 .address-list:hover .address-list-svg {
   fill: var(--accent-color);
 }
-/* .address-list-svg:hover {
+.address-list:focus .address-list-svg {
   fill: var(--accent-color);
-} */
+}
 
 /* настраиваем оформление кнопки */
 
@@ -338,11 +343,17 @@ address {
 .team-link:hover {
   background-color: var(--accent-color);
 }
+.team-link:focus {
+  background-color: var(--accent-color);
+}
 
 .team-link-icon {
   fill: currentColor;
 }
 .team-link:hover .team-link-icon {
+  fill: white;
+}
+.team-link:focus .team-link-icon {
   fill: white;
 }
 /* Оформление секции наши клиенты */
@@ -359,7 +370,7 @@ address {
   margin-right: 30px;
 }
 
-.clients-border {
+.client-logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -368,15 +379,20 @@ address {
   color: #afb1b8;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
+  border-radius: 4px;
 }
-
-.cleints-border:hover .clients-border-svg {
-  fill: var(--accent-color);
+.client-logo:hover {
   border-color: var(--accent-color);
 }
+.client-logo-svg {
+  fill: #afb1b8;
+}
 
-.clients-border-svg {
-  fill: currentColor;
+.client-logo:hover .client-logo-svg {
+  fill: var(--accent-color);
+}
+.client-logo:focus .client-logo-svg {
+  fill: var(--accent-color);
 }
 
 /* оформление футера */
@@ -520,13 +536,25 @@ button:focus {
   padding-left: 22px;
   padding-top: 6px;
   padding-bottom: 6px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.73;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--title-text-color);
 }
 .button-portfolio {
+  border: none;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.73;
   text-align: center;
   border-radius: 4px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 3px 1px rgba(0, 0, 0, 0.1);
 
   background-color: #f5f4fa;
   color: var(--title-text-color);
