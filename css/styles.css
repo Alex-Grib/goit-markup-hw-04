@@ -548,6 +548,7 @@ button:focus {
 }
 .button-portfolio {
   border: none;
+  height: 38px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.73;
@@ -596,6 +597,10 @@ button:focus {
   margin-bottom: 0;
 }
 
+.projects-list:hover {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+}
 .projects-container {
   padding-top: 20px;
   padding-bottom: 20px;
